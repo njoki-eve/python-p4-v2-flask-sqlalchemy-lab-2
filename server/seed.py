@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from app import app
-from models import db, Customer, Review, Item
+from server.models import db, Customer, Review, Item
 
 with app.app_context():
 
@@ -32,3 +32,5 @@ with app.app_context():
     db.session.add(Review(comment="cable too short",
                    customer=customer3, item=item3))
     db.session.commit()
+   
+    
